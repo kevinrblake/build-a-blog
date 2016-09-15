@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+{{success}}
+{% for entry in current %}
+{% if entry.key().id() %}
+<a href="/blog/{{entry.key().id()}}"<div class="entry-title">{{entry.title}}</div></a>
+{% endif %}
+<pre class="entry-text">{{entry.entry}}</pre>
+<hr>
+{% endfor %}
+
+{% endblock %}

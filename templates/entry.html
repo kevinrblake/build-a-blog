@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="error">{{error}}</div>
+<form method="post">
+    <div><label>
+        Enter a title for your blog entry:
+    </label><div></div>
+    <input class="title" type="text" name="title" value={{title}}>
+</div>
+<div>
+    <label>
+        Enter your bog entry below:
+    </label>
+</div><div>
+    <textarea name="entry">{{entry}}</textarea></div>
+    <input type="submit">
+</form>
+<div class="success">{{success}}</div>
+{% endblock %}
